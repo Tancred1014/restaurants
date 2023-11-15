@@ -17,8 +17,10 @@ app.get('/restaurants', (req, res) => {
   res.render('index', { restaurants: restaurants })
 })
 
-app.get('/restaurant/:id', (req, res) => {
-  res.send(`read movie:${id}`)
+app.get('/restaurants/:id', (req, res) => {
+  const id = req.params.id
+  const restaurant = restaurants.find((restaurant) => restaurant.id.toString() === id)
+  res.render('detail', { restaurant })
 })
 
 app.listen(port, () => {
