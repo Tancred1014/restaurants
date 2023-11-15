@@ -23,11 +23,11 @@
 
 把專案複製到你的電腦上:
 
-` $ git clone https://github.com/se040054/Restaurant-list `
+` $ git clone https://https://github.com/Tancred1014/restaurants `
 
 導入專案資料夾:
 
-` $ cd /Restaurant-list `
+` $ cd /restaurants `
 
 安裝npm:
 
