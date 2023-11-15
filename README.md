@@ -23,7 +23,7 @@
 
 把專案複製到你的電腦上:
 
-` $ git clone https://https://github.com/Tancred1014/restaurants `
+` $ git clone https://github.com/Tancred1014/restaurants `
 
 導入專案資料夾:
 
