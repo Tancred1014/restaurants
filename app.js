@@ -30,10 +30,29 @@ app.get('/restaurants', (req, res) => {
   res.render('index', { restaurants: matchRestaurants, keyword })
 })
 
+// app.get('/todos', (req, res) => {
+//   return Todo.findAll({
+//     attributes: ['id', 'name'],
+//     raw: true
+//   })
+//     .then((todos) => res.render('todos', { todos }))
+//     .catch((err) => res.status(422).json(err))
+// })
+
 app.get('/restaurants/:id', (req, res) => {
   const id = req.params.id
   const restaurant = restaurants.find((restaurant) => restaurant.id.toString() === id)
   res.render('detail', { restaurant })
+})
+
+app.get('/restaurants/:id/edit', (req, res) => {
+  const id = req.params.id
+
+  return Restaurants.findByPk(id, {
+    attributes: ['id', 'name'],
+    raw: true
+  })
+    .then((restaurant) => res.render('edit', { restaurant }))
 })
 
 app.listen(port, () => {
